@@ -34,7 +34,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Pge-5U-cwU" id="ECC-VH-VQw"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="5Fd-eP-A1c"/>
                                 </connections>
                             </tableView>
@@ -48,7 +47,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <customObject id="Pge-5U-cwU" customClass="MSResponseTableViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="826" y="259"/>
         </scene>

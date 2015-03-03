@@ -9,6 +9,7 @@
 #import "MSViewController.h"
 #import "MSResponseTableViewDataSource.h"
 #import "MSMovieDetailViewController.h"
+#import "MovieController.h"
 
 @interface MSViewController () <UITableViewDelegate>
 
@@ -33,7 +34,15 @@
 }
 
 - (IBAction)search:(id)sender {
-
+    [[MovieController sharedInstance] retrieveMovieByName:self.searchField.text completion:^(BOOL success) {
+        if (success) {
+            [self.tableView reloadData];
+        } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Failed" message:@"Didn't load" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+            [alertView show];
+        }
+    }];
+    [self.searchField resignFirstResponder];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
