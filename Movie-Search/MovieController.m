@@ -22,11 +22,12 @@
     
 }
 
-- (void)retrieveMovieByName:(NSString *)name completion:(void (^)(BOOL, NSArray *resultMovies))completion {
-    [[NetworkController api] GET:@"search/movie/" parameters:[NetworkController parametersWithAPIKey:@{@"query" : name }] success:^(NSURLSessionDataTask *task, id responseObject) {
-        completion(YES, self.resultMovies = responseObject[@"results"]);
+- (void)retrieveMovieByName:(NSString *)name completion:(void (^)(BOOL success))completion {
+    [[NetworkController api] GET:@"search/movie" parameters:[NetworkController parametersWithAPIKey:@{@"query" : name }] success:^(NSURLSessionDataTask *task, id responseObject) {
+        self.resultMovies = responseObject[@"results"];
+        completion(YES);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        completion(NO, nil);
+        completion(NO);
     }];
 }
 
