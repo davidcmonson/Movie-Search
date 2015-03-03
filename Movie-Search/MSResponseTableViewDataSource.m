@@ -30,9 +30,9 @@ static NSString * const cellReuseKey = @"cell";
     
     NSDictionary *movie = [MovieController sharedInstance].resultMovies[indexPath.row];
     cell.textLabel.text = movie[@"title"];
-    cell.detailTextLabel.text = movie[@"vote_average"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"IMDB Rating: %@", movie[@"vote_average"]];
 
-    cell.imageView.image = movie[@"poster_path"];
+   // cell.imageView.image = movie[@"poster_path"];
 
     return cell;
 }
