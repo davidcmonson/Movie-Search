@@ -27,6 +27,8 @@ static NSString * const APIKey = @"";
 + (NSDictionary *)parametersWithAPIKey:(NSDictionary *)parameters {
     NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
     [parametersWithKey setObject:APIKey forKey:@"api_key"];
+
+    return parametersWithKey;
 }
 
 @end
