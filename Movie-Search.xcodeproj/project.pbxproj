@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08F64CC01AA65D530050301C /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F64CBF1AA65D530050301C /* NetworkController.m */; };
+		346BBC83FDD98AD50F834717 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7D095DCCFDA4D73974D518 /* libPods.a */; };
 		7167C6C81952460600FD8F55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C6C71952460600FD8F55 /* Foundation.framework */; };
 		7167C6CA1952460600FD8F55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C6C91952460600FD8F55 /* CoreGraphics.framework */; };
 		7167C6CC1952460600FD8F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C6CB1952460600FD8F55 /* UIKit.framework */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08F64CBE1AA65D530050301C /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		08F64CBF1AA65D530050301C /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		6E7D095DCCFDA4D73974D518 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7167C6C41952460600FD8F55 /* Movie-Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie-Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7167C6C71952460600FD8F55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7167C6C91952460600FD8F55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,6 +69,8 @@
 		7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSMovieDetailViewController.xib; sourceTree = "<group>"; };
 		7167C70D19525B6500FD8F55 /* MovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieController.h; sourceTree = "<group>"; };
 		7167C70E19525B6500FD8F55 /* MovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieController.m; sourceTree = "<group>"; };
+		75E4866D608B0BF3BA199DA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BC58881B075CAE35E914A907 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +81,7 @@
 				7167C6CA1952460600FD8F55 /* CoreGraphics.framework in Frameworks */,
 				7167C6CC1952460600FD8F55 /* UIKit.framework in Frameworks */,
 				7167C6C81952460600FD8F55 /* Foundation.framework in Frameworks */,
+				346BBC83FDD98AD50F834717 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32B5EB46E668A20594C3A463 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC58881B075CAE35E914A907 /* Pods.debug.xcconfig */,
+				75E4866D608B0BF3BA199DA2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7167C6BB1952460600FD8F55 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +114,7 @@
 				7167C6EC1952460600FD8F55 /* Movie-SearchTests */,
 				7167C6C61952460600FD8F55 /* Frameworks */,
 				7167C6C51952460600FD8F55 /* Products */,
+				32B5EB46E668A20594C3A463 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +134,7 @@
 				7167C6C91952460600FD8F55 /* CoreGraphics.framework */,
 				7167C6CB1952460600FD8F55 /* UIKit.framework */,
 				7167C6E61952460600FD8F55 /* XCTest.framework */,
+				6E7D095DCCFDA4D73974D518 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,6 +154,8 @@
 				7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */,
 				7167C70D19525B6500FD8F55 /* MovieController.h */,
 				7167C70E19525B6500FD8F55 /* MovieController.m */,
+				08F64CBE1AA65D530050301C /* NetworkController.h */,
+				08F64CBF1AA65D530050301C /* NetworkController.m */,
 				7167C6DF1952460600FD8F55 /* Images.xcassets */,
 				7167C6CE1952460600FD8F55 /* Supporting Files */,
 			);
@@ -177,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7167C6F61952460600FD8F55 /* Build configuration list for PBXNativeTarget "Movie-Search" */;
 			buildPhases = (
+				0F2B8B5EC053F1AEEE82EA8F /* Check Pods Manifest.lock */,
 				7167C6C01952460600FD8F55 /* Sources */,
 				7167C6C11952460600FD8F55 /* Frameworks */,
 				7167C6C21952460600FD8F55 /* Resources */,
+				9128AD628243AA9E634CB9EC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +287,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F2B8B5EC053F1AEEE82EA8F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9128AD628243AA9E634CB9EC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7167C6C01952460600FD8F55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +329,7 @@
 				7167C6DE1952460600FD8F55 /* MSViewController.m in Sources */,
 				7167C70F19525B6500FD8F55 /* MovieController.m in Sources */,
 				7167C70519524BC700FD8F55 /* MSMovieDetailViewController.m in Sources */,
+				08F64CC01AA65D530050301C /* NetworkController.m in Sources */,
 				7167C7011952498600FD8F55 /* MSResponseTableViewDataSource.m in Sources */,
 				7167C6D41952460600FD8F55 /* main.m in Sources */,
 			);
@@ -396,6 +453,7 @@
 		};
 		7167C6F71952460600FD8F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC58881B075CAE35E914A907 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -409,6 +467,7 @@
 		};
 		7167C6F81952460600FD8F55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E4866D608B0BF3BA199DA2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
