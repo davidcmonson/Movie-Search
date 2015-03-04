@@ -44,8 +44,8 @@
     self.titleLabel.text = [movieSelection objectForKey:@"original_title"];
     NSLog(@"%@", self.titleLabel.text);
     self.synopsisLabel.text = [movieSelection objectForKey:@"overview"];
-    self.ratingLabel.text = [NSString stringWithFormat:@"%@", [movieSelection objectForKey:@"vote_average"]];
-    self.yearLabel.text = [NSString stringWithFormat:@"%@",[movieSelection objectForKey:@"release_date"]];
+    self.ratingLabel.text = [NSString stringWithFormat:@"IMDB Rating: %@", [movieSelection objectForKey:@"vote_average"]];
+    self.yearLabel.text = [NSString stringWithFormat:@"Release Date: %@",[movieSelection objectForKey:@"release_date"]];
     [self.posterImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://image.tmdb.org/t/p/w92%@", [movieSelection objectForKey:@"poster_path"]]]];
 //    }];
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087F1C521AA698F6008A203B /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 087F1C511AA698F6008A203B /* AppearanceController.m */; };
 		08F64CC01AA65D530050301C /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F64CBF1AA65D530050301C /* NetworkController.m */; };
 		346BBC83FDD98AD50F834717 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7D095DCCFDA4D73974D518 /* libPods.a */; };
 		7167C6C81952460600FD8F55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C6C71952460600FD8F55 /* Foundation.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		087F1C501AA698F6008A203B /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
+		087F1C511AA698F6008A203B /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
 		08F64CBE1AA65D530050301C /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
 		08F64CBF1AA65D530050301C /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 		6E7D095DCCFDA4D73974D518 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +148,8 @@
 				7167C6D61952460600FD8F55 /* MSAppDelegate.h */,
 				7167C6D71952460600FD8F55 /* MSAppDelegate.m */,
 				7167C6D91952460600FD8F55 /* Main.storyboard */,
+				087F1C501AA698F6008A203B /* AppearanceController.h */,
+				087F1C511AA698F6008A203B /* AppearanceController.m */,
 				7167C6DC1952460600FD8F55 /* MSViewController.h */,
 				7167C6DD1952460600FD8F55 /* MSViewController.m */,
 				7167C6FF1952498600FD8F55 /* MSResponseTableViewDataSource.h */,
@@ -330,6 +335,7 @@
 				7167C70F19525B6500FD8F55 /* MovieController.m in Sources */,
 				7167C70519524BC700FD8F55 /* MSMovieDetailViewController.m in Sources */,
 				08F64CC01AA65D530050301C /* NetworkController.m in Sources */,
+				087F1C521AA698F6008A203B /* AppearanceController.m in Sources */,
 				7167C7011952498600FD8F55 /* MSResponseTableViewDataSource.m in Sources */,
 				7167C6D41952460600FD8F55 /* main.m in Sources */,
 			);

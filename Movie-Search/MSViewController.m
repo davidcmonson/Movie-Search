@@ -25,15 +25,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.title = @"Movie Search";
     self.dataSource = [MSResponseTableViewDataSource new];
     
     self.tableView.dataSource = self.dataSource;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
 
-
+    self.tableView.backgroundColor = [UIColor colorWithHue:180.0/360 saturation:.42 brightness:.71 alpha:1.0];
+    self.tableView.separatorColor = [UIColor redColor];
 }
+
+
 
 - (IBAction)search:(id)sender {
     [[MovieController sharedInstance] retrieveMovieByName:self.searchField.text completion:^(BOOL success, NSArray *resultMovies) {
