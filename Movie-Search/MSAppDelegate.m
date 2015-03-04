@@ -7,11 +7,14 @@
 //
 
 #import "MSAppDelegate.h"
+#import "AppearanceController.h"
 
 @implementation MSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [AppearanceController setupDefaultAppearance];
+
     // Override point for customization after application launch.
     return YES;
 }
