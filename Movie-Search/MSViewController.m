@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *searchField;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) MSResponseTableViewDataSource *dataSource;
+@property (nonatomic, strong) MSMovieDetailViewController *detailVC;
 
 @end
 
@@ -31,10 +32,11 @@
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
 
+
 }
 
 - (IBAction)search:(id)sender {
-    [[MovieController sharedInstance] retrieveMovieByName:self.searchField.text completion:^(BOOL success) {
+    [[MovieController sharedInstance] retrieveMovieByName:self.searchField.text completion:^(BOOL success, NSArray *resultMovies) {
         if (success) {
             [self.tableView reloadData];
         } else {
@@ -45,12 +47,39 @@
     [self.searchField resignFirstResponder];
 }
 
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"moviesegue"]) {
+//        UITableViewCell *cell = sender;
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//
+//        MSMovieDetailViewController *detailVC = [segue destinationViewController];
+//
+//    }
+//}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    MSMovieDetailViewController *detailViewController = [MSMovieDetailViewController new];
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    //MSMovieDetailViewController *detailViewController = [MSMovieDetailViewController new];
+    self.detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailStory"];
+    NSDictionary *movie = [MovieController sharedInstance].resultMovies[indexPath.row];
+    self.movieID = movie[@"id"];
+    NSLog(@"%@", self.movieID);
+
+    
+
+    [[MovieController sharedInstance] retrieveMovieByID:[MovieController sharedInstance].resultMovies[indexPath.row][@"id"] completion:^(BOOL success) {
+//        self.detailVC.titleLabel.text = [movieSelection objectForKey:@"original_title"];
+//        self.detailVC.synopsisLabel.text = [movieSelection objectForKey:@"overview"];
+//        self.detailVC.ratingLabel.text = dictionary[@"vote_average"];
+//        self.detailVC.yearLabel.text = dictionary[@"release_date"];
+       // NSLog(@"%@", [movieSelection objectForKey:@"original_title"]);
+        [self.navigationController pushViewController:self.detailVC animated:YES];
+    }];
+
+    
+
 }
 
 @end
