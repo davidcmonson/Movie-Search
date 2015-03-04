@@ -13,5 +13,6 @@
 
 + (AFHTTPSessionManager *)api;
 + (NSDictionary *)parametersWithAPIKey:(NSDictionary *)parameters;
++ (NSString *)apiKey;
 
 @end
