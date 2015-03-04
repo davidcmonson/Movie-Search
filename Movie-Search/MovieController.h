@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface MovieController : NSObject
 
 + (MovieController *)sharedInstance;
 
 @property (nonatomic, strong) NSArray *resultMovies;
+@property (nonatomic, strong) NSDictionary *dictionary;
 
-- (void)retrieveMovieByName:(NSString *)name completion:(void (^)(BOOL success))completion;
-
+- (void)retrieveMovieByName:(NSString *)name completion:(void (^)(BOOL success, NSArray *resultMovies))completion;
+- (void)retrieveMovieByID:(NSString *)movieID completion:(void (^)(BOOL success))completion;
 
 @end
